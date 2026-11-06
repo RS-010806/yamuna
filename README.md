@@ -1,4 +1,4 @@
-# Terrain-Informed Random Forest, CNN, and Cellular Automata for Mapping and Forecasting Delhi Yamuna Floodplain Encroachment
+# Mapping and Forecasting Spatiotemporal Encroachment Dynamics in the Delhi Yamuna Floodplain
 
 Code, data, figures and LaTeX source for the IEEE Transactions manuscript of the
 same title, by Prachi, Rahul Katarya and Kailash Chand Tiwari
@@ -164,12 +164,13 @@ Notebook figure numbering predates the paper's, so they differ:
 The manuscript is under review at IEEE Transactions on Geoscience and Remote
 Sensing. Two points that matter if you edit `paper/paper.tex`:
 
-**The title in the LaTeX source is the accurate one.** A version submitted in
-November 2026 carried the title "Mapping and Forecasting Spatiotemporal
-Encroachment Dynamics in the Delhi Yamuna Floodplain Using Multitemporal
-Satellite Imagery". That title cannot be used: no satellite imagery was used,
-as Section III-B of the paper and the provenance statement above both state. A
-title claiming otherwise contradicts the paper's own methods section.
+**The title must not claim satellite imagery.** A version submitted in November
+2026 carried the title "Mapping and Forecasting Spatiotemporal Encroachment
+Dynamics in the Delhi Yamuna Floodplain Using Multitemporal Satellite Imagery".
+The trailing clause was removed: no satellite imagery was used, as Section III-B
+and the provenance statement above both state, so that clause contradicted the
+paper's own methods section. The current title is the rest of that sentence,
+unchanged.
 
 **Author affiliations must stay in `\thanks{}` blocks.** The IEEE journal
 template requires the first page to carry a footnote with author institution
