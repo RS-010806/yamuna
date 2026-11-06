@@ -1,0 +1,58 @@
+cff-version: 1.2.0
+title: >-
+  Terrain-Informed Random Forest, CNN, and Cellular Automata for Mapping and
+  Forecasting Delhi Yamuna Floodplain Encroachment
+message: >-
+  The manuscript is unpublished and under preparation. If you use this code,
+  the floodplain polygon or the figures, please cite the entry below and check
+  back for the published reference.
+type: software
+authors:
+  - given-names: Prachi
+    affiliation: >-
+      Department of Geospatial Science and Technology, Delhi Technological
+      University, Delhi, India
+  - given-names: Rahul
+    family-names: Katarya
+    email: rahulkatarya@dtu.ac.in
+    affiliation: >-
+      Department of Computer Science and Engineering, Delhi Technological
+      University, Delhi, India
+  - given-names: Kailash Chand
+    family-names: Tiwari
+    affiliation: >-
+      Department of Geospatial Science and Technology, Delhi Technological
+      University, Delhi, India
+repository-code: 'https://github.com/RS-010806/yamuna'
+abstract: >-
+  End-to-end geospatial machine-learning pipeline for mapping land cover,
+  detecting built-up encroachment and forecasting its areal and spatial growth
+  on the active floodplain of the river Yamuna in Delhi. Random Forest, RBF
+  support-vector and fully-convolutional CNN classifiers are scored on one
+  shared spatial hold-out; change detection and a logistic growth model coupled
+  to a driver-based cellular-automata allocation project encroachment to 2035.
+  The floodplain boundary is the authors' real digitized active-floodplain
+  polygon; the multi-temporal imagery is a controlled benchmark with exact
+  ground truth, not observed reflectance.
+keywords:
+  - remote sensing
+  - land-use/land-cover change
+  - floodplain encroachment
+  - random forest
+  - convolutional neural network
+  - cellular automata
+  - spatio-temporal forecasting
+  - Yamuna
+preferred-citation:
+  type: unpublished
+  title: >-
+    Terrain-Informed Random Forest, CNN, and Cellular Automata for Mapping and
+    Forecasting Delhi Yamuna Floodplain Encroachment
+  authors:
+    - given-names: Prachi
+    - given-names: Rahul
+      family-names: Katarya
+    - given-names: Kailash Chand
+      family-names: Tiwari
+  year: 2026
+  notes: Manuscript under preparation.
