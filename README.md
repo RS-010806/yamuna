@@ -159,6 +159,24 @@ Notebook figure numbering predates the paper's, so they differ:
 | Fig. 11 | Fig. 12 | `fig10_future.png` |
 | Fig. 12 | Fig. 13 | `fig11_hindcast.png` |
 
+## Submission notes
+
+The manuscript is under review at IEEE Transactions on Geoscience and Remote
+Sensing. Two points that matter if you edit `paper/paper.tex`:
+
+**The title in the LaTeX source is the accurate one.** A version submitted in
+November 2026 carried the title "Mapping and Forecasting Spatiotemporal
+Encroachment Dynamics in the Delhi Yamuna Floodplain Using Multitemporal
+Satellite Imagery". That title cannot be used: no satellite imagery was used,
+as Section III-B of the paper and the provenance statement above both state. A
+title claiming otherwise contradicts the paper's own methods section.
+
+**Author affiliations must stay in `\thanks{}` blocks.** The IEEE journal
+template requires the first page to carry a footnote with author institution
+information. Putting the affiliations inline under the author names, which is
+the IEEEtran conference layout, produces no such footnote and the submission is
+returned. `docs/revision-log.md` records this.
+
 ## Citing
 
 The manuscript is unpublished and under preparation; see `CITATION.cff` for an

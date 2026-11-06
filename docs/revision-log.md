@@ -73,3 +73,64 @@ All variants removed. The paper now uses "our work" only: Fig. 1 caption "Overvi
 
 ## Incidental
 Fig. 8 (CNN) set at 0.97 columnwidth instead of full width, which clears a 2.4 pt overfull vbox created by the reflow. No other figure changed.
+
+---
+
+# IEEE compliance fix, 6 November 2026
+
+TGRS unsubmitted manuscript TGRS-2026-10828 with the reason: "per the IEEE
+article template, the first page of the manuscript must include a footnote with
+author institution information."
+
+## Cause
+
+The author block typeset the affiliations inline, underneath the author names,
+which is the IEEEtran *conference* layout:
+
+```latex
+\author{Prachi\textsuperscript{1}, Rahul Katarya\textsuperscript{2}, ...\\[3pt]
+\small\textsuperscript{1}Department of Geospatial Science and Technology, ...\\
+\small\textsuperscript{2}Department of Computer Science and Engineering, ...%
+\thanks{Corresponding author: Rahul Katarya (e-mail: rahulkatarya@dtu.ac.in).}}
+```
+
+In the journal layout IEEE requires the affiliations to sit in `\thanks{}`
+blocks, which IEEEtran renders as the unnumbered footnote at the foot of the
+first column of page 1. The old block produced no such footnote, so the
+automated template check failed.
+
+## Fix
+
+Author names only in `\author`; one `\thanks` per affiliation plus the
+corresponding-author line:
+
+```latex
+\author{Prachi,~Rahul~Katarya,~and~Kailash~Chand~Tiwari%
+\thanks{Prachi and K. C. Tiwari are with the Department of Geospatial Science and Technology, Delhi Technological University, Delhi 110042, India.}%
+\thanks{R. Katarya is with the Department of Computer Science and Engineering, Delhi Technological University, Delhi 110042, India (e-mail: rahulkatarya@dtu.ac.in).}%
+\thanks{(Corresponding author: Rahul Katarya.)}}
+```
+
+The running head was also empty (`\markboth{}{}`) and is now set to the journal
+name and a short author-and-title line, as the template expects.
+
+## Verified on the rebuilt PDF
+
+- Affiliation footnote present at the foot of column 1, page 1
+- Running head "IEEE Transactions on Geoscience and Remote Sensing" on page 1,
+  short title on later pages
+- 11 pages, 62 references all cited, 0 undefined references, 0 overfull boxes,
+  0 BibTeX warnings
+- All 26 fonts embedded and subsetted, no encryption, US Letter, PDF 1.5
+- Pages numbered 1 to 11 in one continuous series
+- Clean-room rebuild from the Overleaf zip gives identical text
+
+## Open items for the authors
+
+- Two e-mail addresses are missing from the first `\thanks`; a comment in
+  `paper.tex` marks where they go.
+- The submitted title ("... Using Multitemporal Satellite Imagery") does not
+  match this source and contradicts the data-provenance statement in
+  Section III-B. See the repository README.
+- At 11 pages the paper crosses the TGRS overlength threshold, which starts at
+  page 11 for submissions after 1 January 2026.
